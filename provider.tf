@@ -6,6 +6,12 @@ terraform {
       version = "~> 5.0"
     }
   }
+  backend "s3" {
+    bucket = "anju-terraform-state"
+    key    = "anju-terraform-ec2/terraform.tfstate"
+    region = "eu-west-2"
+
+  }
 
 }
 
